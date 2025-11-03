@@ -1,0 +1,37 @@
+/*         Corne v4 46 KEY MATRIX / LAYOUT MAPPING
+  ╭─────────────────────────────┬─────────────────────────────╮
+  │ LT6 LT5 LT4 LT3 LT2 LT1 LT0 │ RT0 RT1 RT2 RT3 RT4 RT5 RT6 │
+  │ LM6 LM5 LM4 LM3 LM2 LM1 LM0 │ RM0 RM1 RM2 RM3 RM4 RM5 RM6 │
+  │ LB6 LB5 LB4 LB3 LB2 LB1     │     RB1 RB2 RB3 RB4 RB5 RB6 │
+  ╰───────────────╮ LH2 LH1 LH0 │ RH0 RH1 RH2 ╭───────────────╯
+                  ╰─────────────┴─────────────╯ 
+*/
+/ {
+    combos {
+        compatible = "zmk,combos";
+        timeout-ms = <50>;
+        require-prior-idle-ms = <50>;   // default -1
+        // layers = <...>;               // default -1
+        // slow-release = true;          // default false
+
+        // Symbols LR - opening brackets are on the left side, closing on the right
+        combo_lpar   { key-positions = <LT2 LT3>; bindings = <&kp LPAR>;   }; // (
+        combo_rpar   { key-positions = <RT2 RT3>; bindings = <&kp RPAR>;   }; // )
+        combo_lbkt   { key-positions = <LM2 LM3>; bindings = <&kp LBKT>;   }; // [
+        combo_rbkt   { key-positions = <RM2 RM3>; bindings = <&kp RBKT>;   }; // ]
+        combo_lbrc   { key-positions = <LB2 LB3>; bindings = <&kp LBRC>;   }; // {
+        combo_rbrc   { key-positions = <RB2 RB3>; bindings = <&kp RBRC>;   }; // }
+        combo_lt     { key-positions = <LM1 LM2>; bindings = <&kp LT>;     }; // <
+        combo_gt     { key-positions = <RM1 RM2>; bindings = <&kp GT>;     }; // >
+        combo_at     { key-positions = <LB3 LB4>; bindings = <&kp AT>;     }; // @
+        combo_hash   { key-positions = <LM3 LM4>; bindings = <&kp HASH>;   }; // #
+        combo_pipe   { key-positions = <RM3 RM4>; bindings = <&kp PIPE>;   }; // |
+        combo_amps   { key-positions = <RT3 RT4>; bindings = <&kp AMPS>;   }; // &
+        combo_dollar { key-positions = <LT3 LT4>; bindings = <&kp DOLLAR>; }; // $
+        combo_caret  { key-positions = <RT2 RT4>; bindings = <&kp CARET>;  }; // ^
+        combo_prcnt  { key-positions = <LT2 LT4>; bindings = <&kp PRCNT>;  }; // %
+     // combo_star   { key-positions = <XXX XXX>; bindings = <&kp STAR>;   }; // *
+     // combo_under  { key-positions = <XXX XXX>; bindings = <&kp UNDER>;  }; // _
+     // combo_bslh   { key-positions = <XXX XXX>; bindings = <&kp BSLH>;   }; // backslash
+    };
+};
