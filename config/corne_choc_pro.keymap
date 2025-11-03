@@ -17,7 +17,15 @@
     };
 };
 
-#include "corne_combos_1.dtsi"
+/{
+    combos {
+        combo_lt { key-positions = <RT2 RM2>; bindings = <&kp LT>; };
+        combo_gt { key-positions = <RT3 RM3>; bindings = <&kp GT>; };
+    };
+    
+    #include "combo_symbols.dtsi"
+};
+#include "combo_brackets_rr.dtsi"
 
 / {
     behaviors {

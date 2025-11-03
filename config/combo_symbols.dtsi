@@ -1,0 +1,22 @@
+/* Corne v4 46 KEY MATRIX / LAYOUT MAPPING
+╭─────────────────────────────┬─────────────────────────────╮
+│ LT6 LT5 LT4 LT3 LT2 LT1 LT0 │ RT0 RT1 RT2 RT3 RT4 RT5 RT6 │
+│ LM6 LM5 LM4 LM3 LM2 LM1 LM0 │ RM0 RM1 RM2 RM3 RM4 RM5 RM6 │
+│ LB6 LB5 LB4 LB3 LB2 LB1     │     RB1 RB2 RB3 RB4 RB5 RB6 │
+╰───--------────╮ LH2 LH1 LH0 │ RH0 RH1 RH2 ╭──────--------─╯
+                ╰─────────────┴─────-───────╯ 
+*/
+
+combos_symbols {
+    compatible = "zmk,combos";
+    timeout-ms = <150>;
+    require-prior-idle-ms = <150>;
+
+    combo_at     { key-positions = <LB3 LB4>; bindings = <&kp AT>;     };
+    combo_hash   { key-positions = <LM3 LM4>; bindings = <&kp HASH>;   };
+    combo_pipe   { key-positions = <LM2 LM3>; bindings = <&kp PIPE>;   };
+    combo_amps   { key-positions = <LT2 LT3>; bindings = <&kp AMPS>;   };
+    combo_dollar { key-positions = <LT3 LT4>; bindings = <&kp DOLLAR>; };
+    combo_caret  { key-positions = <RT2 RT4>; bindings = <&kp CARET>;  };
+    combo_prcnt  { key-positions = <LT2 LT4>; bindings = <&kp PRCNT>;  };
+};
