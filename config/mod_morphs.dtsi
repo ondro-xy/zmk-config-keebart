@@ -1,0 +1,15 @@
+eq_star: equal_star {
+    compatible = "zmk,behavior-mod-morph";
+    #binding-cells = <0>;
+    bindings = <&kp EQL>, <&kp STAR>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+    // keep-mods = <(MOD_LSFT|MOD_RSFT)>;
+};
+
+min_pl: minus_plus {
+    compatible = "zmk,behavior-mod-morph";
+    #binding-cells = <0>;
+    bindings = <&kp MINUS>, <&kp PLUS>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+    // keep-mods = <(MOD_LSFT|MOD_RSFT)>;
+};
