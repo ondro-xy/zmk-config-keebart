@@ -14,7 +14,7 @@
         timeout-ms = <TIMEOUT>;                                         \
         require-prior-idle-ms = <PRIORIDLE>;                            \
         layers = <LAY>;                                                 \
-        slow-release = SLOWRELEASE;                                     \
+        slow-release = <SLOWRELEASE>;                                   \
     };
 
 / {
