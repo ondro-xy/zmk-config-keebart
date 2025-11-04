@@ -6,32 +6,43 @@
   ╰───────────────╮ LH2 LH1 LH0 │ RH0 RH1 RH2 ╭───────────────╯
                   ╰─────────────┴─────────────╯ 
 */
+
+#define COMBO(name, bind, keypos, timeout, prioridle, lay, slowrelease) \
+    name {                                                              \
+        bindigs = <bind>;                                               \
+        key-positions = <keypos>;                                       \
+        timeout-ms = <timeout>;                                         \
+        require-prior-idle-ms = <prioridle>;                            \
+        layers = <lay>;                                                 \
+        slow-release = slowrelease;                                     \
+    };
+
 / {
     combos {
         compatible = "zmk,combos";
-        timeout-ms = <50>;
-        require-prior-idle-ms = <50>;   // default -1
+        // timeout-ms = <50>;
+        // require-prior-idle-ms = <50>; // default -1
         // layers = <...>;               // default -1
         // slow-release = true;          // default false
 
         // Symbols LR - opening brackets are on the left side, closing on the right
-        combo_lpar   { key-positions = <LT2 LT3>; bindings = <&kp LPAR>;   }; // (
-        combo_rpar   { key-positions = <RT2 RT3>; bindings = <&kp RPAR>;   }; // )
-        combo_lbkt   { key-positions = <LM2 LM3>; bindings = <&kp LBKT>;   }; // [
-        combo_rbkt   { key-positions = <RM2 RM3>; bindings = <&kp RBKT>;   }; // ]
-        combo_lbrc   { key-positions = <LB2 LB3>; bindings = <&kp LBRC>;   }; // {
-        combo_rbrc   { key-positions = <RB2 RB3>; bindings = <&kp RBRC>;   }; // }
-        combo_lt     { key-positions = <LM1 LM2>; bindings = <&kp LT>;     }; // <
-        combo_gt     { key-positions = <RM1 RM2>; bindings = <&kp GT>;     }; // >
-        combo_at     { key-positions = <LB3 LB4>; bindings = <&kp AT>;     }; // @
-        combo_hash   { key-positions = <LM3 LM4>; bindings = <&kp HASH>;   }; // #
-        combo_pipe   { key-positions = <RM3 RM4>; bindings = <&kp PIPE>;   }; // |
-        combo_amps   { key-positions = <RT3 RT4>; bindings = <&kp AMPS>;   }; // &
-        combo_dollar { key-positions = <LT3 LT4>; bindings = <&kp DOLLAR>; }; // $
-        combo_caret  { key-positions = <RT2 RT4>; bindings = <&kp CARET>;  }; // ^
-        combo_prcnt  { key-positions = <LT2 LT4>; bindings = <&kp PRCNT>;  }; // %
-     // combo_star   { key-positions = <XXX XXX>; bindings = <&kp STAR>;   }; // *
-     // combo_under  { key-positions = <XXX XXX>; bindings = <&kp UNDER>;  }; // _
-     // combo_bslh   { key-positions = <XXX XXX>; bindings = <&kp BSLH>;   }; // backslash
+        COMBO(cmb_lpar  , &kp LPAR  , LT2 LT3, 50, 50, -1, false)  // (
+        COMBO(cmb_rpar  , &kp RPAR  , RT2 RT3, 50, 50, -1, false)  // )
+        COMBO(cmb_lbkt  , &kp LBKT  , LM2 LM3, 50, 50, -1, false)  // [
+        COMBO(cmb_rbkt  , &kp RBKT  , RM2 RM3, 50, 50, -1, false)  // ]
+        COMBO(cmb_lbrc  , &kp LBRC  , LB2 LB3, 50, 50, -1, false)  // {
+        COMBO(cmb_rbrc  , &kp RBRC  , RB2 RB3, 50, 50, -1, false)  // }
+        COMBO(cmb_lt    , &kp LT    , LM1 LM2, 50, 50, -1, false)  // <
+        COMBO(cmb_gt    , &kp GT    , RM1 RM2, 50, 50, -1, false)  // >
+        COMBO(cmb_at    , &kp AT    , LB3 LB4, 50, 50, -1, false)  // @
+        COMBO(cmb_hash  , &kp HASH  , LM3 LM4, 50, 50, -1, false)  // #
+        COMBO(cmb_pipe  , &kp PIPE  , RM3 RM4, 50, 50, -1, false)  // |
+        COMBO(cmb_amps  , &kp AMPS  , RT3 RT4, 50, 50, -1, false)  // &
+        COMBO(cmb_dollar, &kp DOLLAR, LT3 LT4, 50, 50, -1, false)  // $
+        COMBO(cmb_caret , &kp CARET , RT2 RT4, 50, 50, -1, false)  // ^
+        COMBO(cmb_prcnt , &kp PRCNT , LT2 LT4, 50, 50, -1, false)  // %
+     // COMBO(cmb_star  , &kp STAR  , xxx xxx, 50, 50, -1, false)  // *
+     // COMBO(cmb_under , &kp UNDER , xxx xxx, 50, 50, -1, false)  // _
+     // COMBO(cmb_bslh  , &kp BSLH  , xxx xxx, 50, 50, -1, false)  // backslash
     };
 };
