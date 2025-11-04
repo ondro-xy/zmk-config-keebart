@@ -26,23 +26,23 @@
         // slow-release = true;          // default false
 
         // Symbols RR - opening and closing brackets are on the right side
-        COMBO(cmb_lpar  , &kp LPAR  , RT2 RT3, 50, 50, -1, false)  // (
-        COMBO(cmb_rpar  , &kp RPAR  , RT3 RT4, 50, 50, -1, false)  // )
-        COMBO(cmb_lbkt  , &kp LBKT  , RM2 RM3, 50, 50, -1, false)  // [
-        COMBO(cmb_rbkt  , &kp RBKT  , RM3 RM4, 50, 50, -1, false)  // ]
-        COMBO(cmb_lbrc  , &kp LBRC  , RB2 RB3, 50, 50, -1, false)  // {
-        COMBO(cmb_rbrc  , &kp RBRC  , RB3 RB4, 50, 50, -1, false)  // }
-        COMBO(cmb_lt    , &kp LT    , RT2 RM2, 50, 50, -1, false)  // <
-        COMBO(cmb_gt    , &kp GT    , RT3 RM3, 50, 50, -1, false)  // >
-        COMBO(cmb_at    , &kp AT    , LB3 LB4, 50, 50, -1, false)  // @
-        COMBO(cmb_hash  , &kp HASH  , LM3 LM4, 50, 50, -1, false)  // #
-        COMBO(cmb_pipe  , &kp PIPE  , LM2 LM3, 50, 50, -1, false)  // |
-        COMBO(cmb_amps  , &kp AMPS  , LT2 LT3, 50, 50, -1, false)  // &
-        COMBO(cmb_dollar, &kp DOLLAR, LT3 LT4, 50, 50, -1, false)  // $
-        COMBO(cmb_caret , &kp CARET , RT2 RT4, 50, 50, -1, false)  // ^
-        COMBO(cmb_prcnt , &kp PRCNT , LT2 LT4, 50, 50, -1, false)  // %
-     // COMBO(cmb_star  , &kp STAR  , xxx xxx, 50, 50, -1, false)  // *
-     // COMBO(cmb_under , &kp UNDER , xxx xxx, 50, 50, -1, false)  // _
-     // COMBO(cmb_bslh  , &kp BSLH  , xxx xxx, 50, 50, -1, false)  // backslash
+        COMBO(cmb_lpar  , &kp LPAR  , RT2 RT3, 50, 50, 0, false)  // (
+        COMBO(cmb_rpar  , &kp RPAR  , RT3 RT4, 50, 50, 0, false)  // )
+        COMBO(cmb_lbkt  , &kp LBKT  , RM2 RM3, 50, 50, 0, false)  // [
+        COMBO(cmb_rbkt  , &kp RBKT  , RM3 RM4, 50, 50, 0, false)  // ]
+        COMBO(cmb_lbrc  , &kp LBRC  , RB2 RB3, 50, 50, 0, false)  // {
+        COMBO(cmb_rbrc  , &kp RBRC  , RB3 RB4, 50, 50, 0, false)  // }
+        COMBO(cmb_lt    , &kp LT    , RT2 RM2, 50, 50, 0, false)  // <
+        COMBO(cmb_gt    , &kp GT    , RT3 RM3, 50, 50, 0, false)  // >
+        COMBO(cmb_at    , &kp AT    , LB3 LB4, 50, 50, 0, false)  // @
+        COMBO(cmb_hash  , &kp HASH  , LM3 LM4, 50, 50, 0, false)  // #
+        COMBO(cmb_pipe  , &kp PIPE  , LM2 LM3, 50, 50, 0, false)  // |
+        COMBO(cmb_amps  , &kp AMPS  , LT2 LT3, 50, 50, 0, false)  // &
+        COMBO(cmb_dollar, &kp DOLLAR, LT3 LT4, 50, 50, 0, false)  // $
+        COMBO(cmb_caret , &kp CARET , RT2 RT4, 50, 50, 0, false)  // ^
+        COMBO(cmb_prcnt , &kp PRCNT , LT2 LT4, 50, 50, 0, false)  // %
+     // COMBO(cmb_star  , &kp STAR  , xxx xxx, 50, 50, 0, false)  // *
+     // COMBO(cmb_under , &kp UNDER , xxx xxx, 50, 50, 0, false)  // _
+     // COMBO(cmb_bslh  , &kp BSLH  , xxx xxx, 50, 50, 0, false)  // backslash
     };
 };
