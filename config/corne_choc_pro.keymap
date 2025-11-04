@@ -16,6 +16,7 @@
 };
 
 
+#include "corne_labels.h"
 #include "corne_combos_lr.dtsi"
 
 
