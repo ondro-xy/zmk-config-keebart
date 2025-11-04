@@ -7,14 +7,14 @@
                   ╰─────────────┴─────────────╯ 
 */
 
-#define COMBO(name, bind, keypos, timeout, prioridle, lay, slowrelease) \
-    name {                                                              \
-        bindigs = <bind>;                                               \
-        key-positions = <keypos>;                                       \
-        timeout-ms = <timeout>;                                         \
-        require-prior-idle-ms = <prioridle>;                            \
-        layers = <lay>;                                                 \
-        slow-release = slowrelease;                                     \
+#define COMBO(NAME, BIND, KEYPOS, TIMEOUT, PRIORIDLE, LAY, SLOWRELEASE) \
+    NAME {                                                              \
+        bindigs = <BIND>;                                               \
+        key-positions = <KEYPOS>;                                       \
+        timeout-ms = <TIMEOUT>;                                         \
+        require-prior-idle-ms = <PRIORIDLE>;                            \
+        layers = <LAY>;                                                 \
+        slow-release = SLOWRELEASE;                                     \
     };
 
 / {
