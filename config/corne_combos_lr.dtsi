@@ -9,7 +9,7 @@
 
 #define COMBO(NAME, BIND, KEYPOS, TIMEOUT, PRIORIDLE, LAY) \
     NAME {                                                              \
-        bindigs = <BIND>;                                               \
+        bindings = <BIND>;                                              \
         key-positions = <KEYPOS>;                                       \
         timeout-ms = <TIMEOUT>;                                         \
         require-prior-idle-ms = <PRIORIDLE>;                            \
