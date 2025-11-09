@@ -20,6 +20,7 @@
 #include "corne_combos_lr.dtsi"
 
 #define PAUSBR PAUSE_BREAK
+#define VOLDN &mt_vol C_MUTE C_VOL_DN
 
 / {
     behaviors {
@@ -48,12 +49,12 @@
             hold-trigger-on-release;
         };
 
-        voldn_mut: voldn_mute {
+        mt_vol: voldn_mute {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <500>;
-            bindings = <C_MUTE C_VOL_DN>;
+            bindings = <&kp>, <&kp>;
             display-name = "Mod-Tap";
         };
     };
@@ -115,7 +116,7 @@
             // ╭──────────┬──────────┬───────────┬──────────┬──────────┬──────────┬───────────╮╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
                 &kp SLCK   &kp PAUSBR &kp INS     &kp CAPS   &kp PSCRN  &none      &kp C_VOL_UP &kp K_PP   &none      &kp F1     &kp F2     &kp F3     &kp F4     &kp F15
             // ├──────────┼──────────┼───────────┼──────────┼──────────┼──────────┼───────────┤├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
-                &kp KP_NUM &kp LGUI   &kp LALT    &kp LSHFT  &kp LCTRL  &none      &voldn_mut   &none      &none      &kp F5     &kp F6     &kp F7     &kp F8     &kp F14
+                &kp KP_NUM &kp LGUI   &kp LALT    &kp LSHFT  &kp LCTRL  &none      VOLDN        &none      &none      &kp F5     &kp F6     &kp F7     &kp F8     &kp F14
             // ├──────────┼──────────┼───────────┼──────────┼──────────┼──────────┼───────────╯╰──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
                 &none      &none      &kp K_CMENU &none      &none      &none                              &none      &kp F9     &kp F10    &kp F11    &kp F12    &kp F13
             // ╰──────────┴──────────┴───────────┼──────────┼──────────┼──────────┤                       ├──────────┼──────────┼──────────┼──────────┴──────────┴──────────╯
