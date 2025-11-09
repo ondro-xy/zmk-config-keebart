@@ -19,7 +19,7 @@
 #include "corne_labels.h"
 #include "corne_combos_lr.dtsi"
 
-#define PAUS PAUSE_BREAK
+#define PAUSBR PAUSE_BREAK
 
 / {
     behaviors {
@@ -33,7 +33,7 @@
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <KEYS_RIGHT KEYS_THUNB>; // List of keys on the right side of the keyboard
+            hold-trigger-key-positions = <KEYS_RIGHT KEYS_THUMB>; // List of keys on the right side of the keyboard
             hold-trigger-on-release;
         };
         hmr: home_row_mod_right {
@@ -113,7 +113,7 @@
             display-name = "FKeys";
             bindings = <
             // ╭──────────┬──────────┬───────────┬──────────┬──────────┬──────────┬───────────╮╭──────────┬──────────┬──────────┬──────────┬──────────┬──────────┬──────────╮
-                &kp SLCK   &kp PAUS   &kp INS     &kp CAPS   &kp PSCRN  &none      &kp C_VOL_UP &kp K_PP   &none      &kp F1     &kp F2     &kp F3     &kp F4     &kp F15
+                &kp SLCK   &kp PAUSBR &kp INS     &kp CAPS   &kp PSCRN  &none      &kp C_VOL_UP &kp K_PP   &none      &kp F1     &kp F2     &kp F3     &kp F4     &kp F15
             // ├──────────┼──────────┼───────────┼──────────┼──────────┼──────────┼───────────┤├──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
                 &kp KP_NUM &kp LGUI   &kp LALT    &kp LSHFT  &kp LCTRL  &none      &voldn_mut   &none      &none      &kp F5     &kp F6     &kp F7     &kp F8     &kp F14
             // ├──────────┼──────────┼───────────┼──────────┼──────────┼──────────┼───────────╯╰──────────┼──────────┼──────────┼──────────┼──────────┼──────────┼──────────┤
