@@ -29,6 +29,13 @@ sl_bsl: slash_backslash {
     mods = <(MOD_LSFT|MOD_RSFT)>;
 };
 
+sl_star: slash_star {
+    compatible = "zmk,behavior-mod-morph";
+    #binding-cells = <0>;
+    bindings = <&kp SLASH>, <&kp STAR>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+};
+
 com_sec: comma_semicolon {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
