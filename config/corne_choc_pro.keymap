@@ -52,8 +52,8 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-            bindings = <&kp C_MUTE>, <&kp C_VOL_DN>;
+            tapping-term-ms = <500>;
+            bindings = <&kp C_MUTE &kp C_VOL_DN>;
             display-name = "Mod-Tap";
         };
     };
