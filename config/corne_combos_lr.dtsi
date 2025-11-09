@@ -4,44 +4,46 @@
   │ LM6 LM5 LM4 LM3 LM2 LM1 LM0 │ RM0 RM1 RM2 RM3 RM4 RM5 RM6 │
   │ LB6 LB5 LB4 LB3 LB2 LB1     │     RB1 RB2 RB3 RB4 RB5 RB6 │
   ╰───────────────╮ LH2 LH1 LH0 │ RH0 RH1 RH2 ╭───────────────╯
-                  ╰─────────────┴─────────────╯ 
+                  ╰─────────────┴─────────────╯
 */
 
 #define COMBO(NAME, BIND, KEYPOS, TIMEOUT, PRIORIDLE, LAY) \
-    NAME {                                                              \
-        bindings = <BIND>;                                              \
-        key-positions = <KEYPOS>;                                       \
-        timeout-ms = <TIMEOUT>;                                         \
-        require-prior-idle-ms = <PRIORIDLE>;                            \
-        layers = <LAY>;                                                 \
+    NAME {                                                 \
+        bindings = <BIND>;                                 \
+        key-positions = <KEYPOS>;                          \
+        timeout-ms = <TIMEOUT>;                            \
+        require-prior-idle-ms = <PRIORIDLE>;               \
+        layers = <LAY>;                                    \
     };
 
 / {
     combos {
         compatible = "zmk,combos";
-        // timeout-ms = <50>;
-        // require-prior-idle-ms = <50>; // default -1
-        // layers = <...>;               // default -1
-        // slow-release = true;          // default false
 
-        // Symbols LR - opening brackets are on the left side, closing on the right
-        COMBO(cmb_lpar  , &kp LPAR  , LT2 LT3, 50, 50, 0)  // (
-        COMBO(cmb_rpar  , &kp RPAR  , RT2 RT3, 50, 50, 0)  // )
-        COMBO(cmb_lbkt  , &kp LBKT  , LM2 LM3, 50, 50, 0)  // [
-        COMBO(cmb_rbkt  , &kp RBKT  , RM2 RM3, 50, 50, 0)  // ]
-        COMBO(cmb_lbrc  , &kp LBRC  , LB2 LB3, 50, 50, 0)  // {
-        COMBO(cmb_rbrc  , &kp RBRC  , RB2 RB3, 50, 50, 0)  // }
-        COMBO(cmb_lt    , &kp LT    , LM1 LM2, 50, 50, 0)  // <
-        COMBO(cmb_gt    , &kp GT    , RM1 RM2, 50, 50, 0)  // >
-        COMBO(cmb_at    , &kp AT    , LB3 LB4, 50, 50, 0)  // @
-        COMBO(cmb_hash  , &kp HASH  , LM3 LM4, 50, 50, 0)  // #
-        COMBO(cmb_pipe  , &kp PIPE  , RM3 RM4, 50, 50, 0)  // |
-        COMBO(cmb_amps  , &kp AMPS  , RT3 RT4, 50, 50, 0)  // &
-        COMBO(cmb_dollar, &kp DOLLAR, LT3 LT4, 50, 50, 0)  // $
-        COMBO(cmb_caret , &kp CARET , RT2 RT4, 50, 50, 0)  // ^
+        // opening brackets are on the left side, closing on the right
+        COMBO(cmb_lpar  , &kp LPAR  , LM2 LM3, 50, 50, 0)  // (
+        COMBO(cmb_rpar  , &kp RPAR  , RM2 RM3, 50, 50, 0)  // )
+        COMBO(cmb_lbkt  , &kp LBKT  , LB2 LB3, 50, 50, 0)  // [
+        COMBO(cmb_rbkt  , &kp RBKT  , RB2 RB3, 50, 50, 0)  // ]
+        COMBO(cmb_lbrc  , &kp LBRC  , LM1 LM2, 50, 50, 0)  // {
+        COMBO(cmb_rbrc  , &kp RBRC  , RM1 RM2, 50, 50, 0)  // }
+        COMBO(cmb_lbrc2 , &kp LT    , LM2 LM4, 50, 50, 0)  // {
+        COMBO(cmb_rbrc2 , &kp GT    , RM2 RM4, 50, 50, 0)  // {
+        COMBO(cmb_lt    , &kp LT    , LT2 LT3, 50, 50, 0)  // <
+        COMBO(cmb_gt    , &kp GT    , RT2 RT3, 50, 50, 0)  // >
+
+        // left
         COMBO(cmb_prcnt , &kp PRCNT , LT2 LT4, 50, 50, 0)  // %
-     // COMBO(cmb_star  , &kp STAR  , xxx xxx, 50, 50, 0)  // *
-     // COMBO(cmb_under , &kp UNDER , xxx xxx, 50, 50, 0)  // _
-     // COMBO(cmb_bslh  , &kp BSLH  , xxx xxx, 50, 50, 0)  // backslash
+        COMBO(cmb_at    , &kp AT    , LT3 LT4, 50, 50, 0)  // @
+        COMBO(cmb_dollar, &kp DOLLAR, LM3 LM4, 50, 50, 0)  // $
+        COMBO(cmb_hash  , &kp HASH  , LB3 LB4, 50, 50, 0)  // #
+
+        // right
+        COMBO(cmb_equal , &kp EQL   , RT1 RT2, 50, 50, 0)  // =
+        COMBO(cmb_caret , &kp CARET , RT2 RT4, 50, 50, 0)  // ^
+        COMBO(cmb_amps  , &kp AMPS  , RT3 RT4, 50, 50, 0)  // &
+        COMBO(cmb_pipe  , &kp PIPE  , RM3 RM4, 50, 50, 0)  // |
+        COMBO(cmb_under , &kp UNDER , RH0 RB2, 50, 50, 0)  // _
+        COMBO(cmb_bslh  , &kp BSLH  , RB1 RB2, 50, 50, 0)  // backslash
     };
 };
