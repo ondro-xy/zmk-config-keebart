@@ -48,7 +48,7 @@
             hold-trigger-key-positions = <KEYS_LEFT KEYS_THUMB_L RH0>; // List of keys on the left side of the keyboard
             hold-trigger-on-release;
         };
-        hmlg: home_row_mod_left {
+        hmlg: home_row_mod_left_gui {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
@@ -59,7 +59,7 @@
             hold-trigger-key-positions = <KEYS_RIGHT KEYS_THUMB_R LH0>; // List of keys on the right side of the keyboard
             hold-trigger-on-release;
         };
-        hmrg: home_row_mod_right {
+        hmrg: home_row_mod_right_gui {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
