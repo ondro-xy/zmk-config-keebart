@@ -6,6 +6,14 @@ eq_star: equal_star {
     // keep-mods = <(MOD_LSFT|MOD_RSFT)>;
 };
 
+eq_ex: equal_exclamation {
+    compatible = "zmk,behavior-mod-morph";
+    #binding-cells = <0>;
+    bindings = <&kp EQL>, <&kp EXCLAMATION>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+    // keep-mods = <(MOD_LSFT|MOD_RSFT)>;
+};
+
 min_plu: minus_plus {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;

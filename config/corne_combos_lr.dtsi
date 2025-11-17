@@ -20,30 +20,30 @@
     combos {
         compatible = "zmk,combos";
 
-        // opening brackets are on the left side, closing on the right
-        COMBO(cmb_lpar  , &kp LPAR  , LM2 LM3, 50, 50, 0)  // (
-        COMBO(cmb_rpar  , &kp RPAR  , RM2 RM3, 50, 50, 0)  // )
-        COMBO(cmb_lbkt  , &kp LBKT  , LB2 LB3, 50, 50, 0)  // [
-        COMBO(cmb_rbkt  , &kp RBKT  , RB2 RB3, 50, 50, 0)  // ]
-        COMBO(cmb_lbrc  , &kp LBRC  , LM1 LM2, 50, 50, 0)  // {
-        COMBO(cmb_rbrc  , &kp RBRC  , RM1 RM2, 50, 50, 0)  // }
-        COMBO(cmb_lbrc2 , &kp LT    , LM2 LM4, 50, 50, 0)  // {
-        COMBO(cmb_rbrc2 , &kp GT    , RM2 RM4, 50, 50, 0)  // {
-        COMBO(cmb_lt    , &kp LT    , LT2 LT3, 50, 50, 0)  // <
-        COMBO(cmb_gt    , &kp GT    , RT2 RT3, 50, 50, 0)  // >
+        COMBO(cmb_ret   , &kp RET   , LH0 RH0, 50, 50, 0)  /* Enter */
 
-        // left
-        COMBO(cmb_prcnt , &kp PRCNT , LT2 LT4, 50, 50, 0)  // %
-        COMBO(cmb_at    , &kp AT    , LT3 LT4, 50, 50, 0)  // @
-        COMBO(cmb_dollar, &kp DOLLAR, LM3 LM4, 50, 50, 0)  // $
-        COMBO(cmb_hash  , &kp HASH  , LB3 LB4, 50, 50, 0)  // #
+        /* opening brackets are on the left side, closing on the right */
+        COMBO(cmb_lpar  , &kp LPAR  , LM2 LM3, 50, 50, 0)  /*  (  */
+        COMBO(cmb_rpar  , &kp RPAR  , RM2 RM3, 50, 50, 0)  /*  )  */
+        COMBO(cmb_lbkt  , &kp LBKT  , LB2 LB3, 50, 50, 0)  /*  [  */
+        COMBO(cmb_rbkt  , &kp RBKT  , RB2 RB3, 50, 50, 0)  /*  ]  */
+        COMBO(cmb_lbrc  , &kp LBRC  , LM2 LM4, 50, 50, 0)  /*  {  */
+        COMBO(cmb_rbrc  , &kp RBRC  , RM2 RM4, 50, 50, 0)  /*  }  */
+        COMBO(cmb_lt    , &kp LT    , LT2 LT3, 50, 50, 0)  /*  <  */
+        COMBO(cmb_gt    , &kp GT    , RT2 RT3, 50, 50, 0)  /*  >  */
 
-        // right
-        COMBO(cmb_equal , &kp EQL   , RT1 RT2, 50, 50, 0)  // =
-        COMBO(cmb_caret , &kp CARET , RT2 RT4, 50, 50, 0)  // ^
-        COMBO(cmb_amps  , &kp AMPS  , RT3 RT4, 50, 50, 0)  // &
-        COMBO(cmb_pipe  , &kp PIPE  , RM3 RM4, 50, 50, 0)  // |
-        COMBO(cmb_under , &kp UNDER , RH0 RB2, 50, 50, 0)  // _
-        COMBO(cmb_bslh  , &kp BSLH  , RB1 RB2, 50, 50, 0)  // backslash
+        /* left */
+        COMBO(cmb_prcnt , &kp PRCNT , LT2 LT4, 50, 50, 0)  /*  %  */
+        COMBO(cmb_at    , &kp AT    , LT3 LT4, 50, 50, 0)  /*  @  */
+        COMBO(cmb_dollar, &kp DOLLAR, LM3 LM4, 50, 50, 0)  /*  $  */
+        COMBO(cmb_hash  , &kp HASH  , LB3 LB4, 50, 50, 0)  /*  #  */
+
+        /* right */
+        COMBO(cmb_equal , &kp EQL   , RT1 RT2, 50, 50, 0)  /*  =  */
+        COMBO(cmb_caret , &kp CARET , RT2 RT4, 50, 50, 0)  /*  ^  */
+        COMBO(cmb_amps  , &kp AMPS  , RT3 RT4, 50, 50, 0)  /*  &  */
+        COMBO(cmb_pipe  , &kp PIPE  , RM3 RM4, 50, 50, 0)  /*  |  */
+        COMBO(cmb_under , &kp UNDER , RH0 RB2, 50, 50, 0)  /*  _  */
+        COMBO(cmb_bslh  , &kp BSLH  , RB1 RB2, 50, 50, 0)  /*  \  */
     };
 };
