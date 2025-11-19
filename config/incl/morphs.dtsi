@@ -46,7 +46,7 @@ sl_star: slash_star {
     mods = <(MOD_LSFT|MOD_RSFT)>;
 };
 
-com_sec: comma_semicolon {
+com_sem: comma_semicolon {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
     bindings = <&kp COMMA>, <&kp SEMICOLON>;

@@ -7,43 +7,49 @@
                   ╰─────────────┴─────────────╯
 */
 
-#define COMBO(NAME, BIND, KEYPOS, TIMEOUT, PRIORIDLE, LAY) \
-    NAME {                                                 \
-        bindings = <BIND>;                                 \
-        key-positions = <KEYPOS>;                          \
-        timeout-ms = <TIMEOUT>;                            \
-        require-prior-idle-ms = <PRIORIDLE>;               \
-        layers = <LAY>;                                    \
+#define COMBO(NAME, BIND, KEYPOS, TIMEOUT, PRIORIDLE, LAYERS) \
+    NAME {                                                    \
+        bindings = <BIND>;                                    \
+        key-positions = <KEYPOS>;                             \
+        timeout-ms = <TIMEOUT>;                               \
+        require-prior-idle-ms = <PRIORIDLE>;                  \
+        layers = <LAYERS>;                                    \
     };
 
 / {
     combos {
         compatible = "zmk,combos";
 
-        COMBO(cmb_ret   , &kp RET   , LH0 RH0, 50, 50, 0)  /* Enter */
+        COMBO(cmb_ret, &kp RET     , LH0 RH0, 100, 150, Base)   /* Enter */
+        COMBO(cmb_ret, &kp KP_ENTER, LH0 RH0, 100, 150, NumKp)  /* Enter Numpad */
 
         /* opening brackets are on the left side, closing on the right */
-        COMBO(cmb_lpar  , &kp LPAR  , LM2 LM3, 50, 50, 0)  /*  (  */
-        COMBO(cmb_rpar  , &kp RPAR  , RM2 RM3, 50, 50, 0)  /*  )  */
-        COMBO(cmb_lbkt  , &kp LBKT  , LB2 LB3, 50, 50, 0)  /*  [  */
-        COMBO(cmb_rbkt  , &kp RBKT  , RB2 RB3, 50, 50, 0)  /*  ]  */
-        COMBO(cmb_lbrc  , &kp LBRC  , LM2 LM4, 50, 50, 0)  /*  {  */
-        COMBO(cmb_rbrc  , &kp RBRC  , RM2 RM4, 50, 50, 0)  /*  }  */
-        COMBO(cmb_lt    , &kp LT    , LT2 LT3, 50, 50, 0)  /*  <  */
-        COMBO(cmb_gt    , &kp GT    , RT2 RT3, 50, 50, 0)  /*  >  */
+        COMBO(cmb_lpar, &hml LC(LSHFT) LPAR, LM2 LM3, 75, 75, Base NavNum Num)  /*  (  */
+        COMBO(cmb_rpar, &hmr RC(RSHFT) RPAR, RM2 RM3, 75, 75, Base NavNum Num)  /*  )  */
+        COMBO(cmb_lbkt, &kp            LBKT, LB2 LB3, 75, 75, Base NavNum Num)  /*  [  */
+        COMBO(cmb_rbkt, &kp            RBKT, RB2 RB3, 75, 75, Base NavNum Num)  /*  ]  */
+        COMBO(cmb_lbrc, &hml LA(LSHFT) LBRC, LM2 LM4, 75, 75, Base NavNum Num)  /*  {  */
+        COMBO(cmb_rbrc, &hmr LA(LSHFT) RBRC, RM2 RM4, 75, 75, Base NavNum Num)  /*  }  */
+        COMBO(cmb_lt  , &kp            LT  , LT2 LT3, 75, 75, Base NavNum Num)  /*  <  */
+        COMBO(cmb_gt  , &kp            GT  , RT2 RT3, 75, 75, Base NavNum Num)  /*  >  */
 
         /* left */
-        COMBO(cmb_prcnt , &kp PRCNT , LT2 LT4, 50, 50, 0)  /*  %  */
-        COMBO(cmb_at    , &kp AT    , LT3 LT4, 50, 50, 0)  /*  @  */
-        COMBO(cmb_dollar, &kp DOLLAR, LM3 LM4, 50, 50, 0)  /*  $  */
-        COMBO(cmb_hash  , &kp HASH  , LB3 LB4, 50, 50, 0)  /*  #  */
+        COMBO(cmb_prcnt , &kp PRCNT , LT2 LT4, 75, 75, Base)  /*  %  */
+        COMBO(cmb_at    , &kp AT    , LT3 LT4, 75, 75, Base)  /*  @  */
+        COMBO(cmb_dollar, &kp DOLLAR, LM3 LM4, 75, 75, Base)  /*  $  */
+        COMBO(cmb_hash  , &kp HASH  , LB3 LB4, 75, 75, Base)  /*  #  */
 
         /* right */
-        COMBO(cmb_equal , &kp EQL   , RT1 RT2, 50, 50, 0)  /*  =  */
-        COMBO(cmb_caret , &kp CARET , RT2 RT4, 50, 50, 0)  /*  ^  */
-        COMBO(cmb_amps  , &kp AMPS  , RT3 RT4, 50, 50, 0)  /*  &  */
-        COMBO(cmb_pipe  , &kp PIPE  , RM3 RM4, 50, 50, 0)  /*  |  */
-        COMBO(cmb_under , &kp UNDER , RH0 RB2, 50, 50, 0)  /*  _  */
-        COMBO(cmb_bslh  , &kp BSLH  , RB1 RB2, 50, 50, 0)  /*  \  */
+     // COMBO(cmb_equal  , &kp EQL   , RT1 RT2, 75, 75, Base NavNum Num)  /*  =  */
+        COMBO(cmb_caret  , &kp CARET , RT2 RT4, 75, 75, Base NavNum Num)  /*  ^  */
+        COMBO(cmb_amps   , &kp AMPS  , RT3 RT4, 75, 75, Base NavNum Num)  /*  &  */
+        COMBO(cmb_pipe   , &kp PIPE  , RM3 RM4, 75, 75, Base NavNum Num)  /*  |  */
+        COMBO(cmb_under  , &kp UNDER , RH0 RB2, 75, 75, Base NavNum Num)  /*  _  */
+        COMBO(cmb_bslh   , &kp BSLH  , RB1 RB2, 75, 75, Base NavNum Num)  /*  \  */
+        COMBO(cmb_dollar2, &kp DOLLAR, RB3 RB4, 75, 75, Base NavNum Num)  /*  $  */
+
+        /* left + right */
+        COMBO(cmb_capsw , &caps_word, LT3 RT3, 75, 75, Base)
+        COMBO(cmb_under2, &kp UNDER , LB3 RB3, 75, 75, Base NavNum Num)  /*  _  */
     };
 };

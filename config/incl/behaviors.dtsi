@@ -12,7 +12,7 @@
             flavor = "balanced";
             require-prior-idle-ms = <150>;
             tapping-term-ms = <280>;
-            quick-tap-ms = <175>;
+            quick-tap-ms = <190>;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_RIGHT KEYS_THUMB_R LH0>;
             hold-trigger-on-release;
@@ -23,7 +23,7 @@
             flavor = "balanced";
             require-prior-idle-ms = <150>;
             tapping-term-ms = <280>;
-            quick-tap-ms = <175>;
+            quick-tap-ms = <190>;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_LEFT KEYS_THUMB_L RH0>;
             hold-trigger-on-release;
@@ -34,7 +34,7 @@
             flavor = "balanced";
             require-prior-idle-ms = <150>;
             tapping-term-ms = <580>;
-            quick-tap-ms = <175>;
+            quick-tap-ms = <250>;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_RIGHT KEYS_THUMB_R LH0>;
             hold-trigger-on-release;
@@ -45,19 +45,37 @@
             flavor = "balanced";
             require-prior-idle-ms = <150>;
             tapping-term-ms = <580>;
-            quick-tap-ms = <175>;
+            quick-tap-ms = <250>;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_LEFT KEYS_THUMB_L RH0>;
             hold-trigger-on-release;
         };
 
-        ht_media: ht_media_controls {
+        mtts: mod_tap_tap_preferred_short {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <500>;
+            require-prior-idle-ms = <150>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <200>;
             bindings = <&kp>, <&kp>;
-            display-name = "HoldTab Media Controlos";
+        };
+        mttl: mod_tap_tap_preferred_long {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            require-prior-idle-ms = <150>;
+            tapping-term-ms = <550>;
+            quick-tap-ms = <200>;
+            bindings = <&kp>, <&kp>;
+        };
+
+        lcw: layer_tap_caps_word {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&mo>, <&caps_word>;
         };
     };
 };
