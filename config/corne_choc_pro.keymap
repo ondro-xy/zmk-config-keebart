@@ -19,65 +19,7 @@
 #include "incl/corne_labels.h"
 #include "incl/combos_lr.dtsi"
 #include "incl/morphs.dtsi"
-
-/ {
-    behaviors {
-
-        hml: home_row_mod_left {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "balanced";
-            require-prior-idle-ms = <150>;
-            tapping-term-ms = <280>;
-            quick-tap-ms = <175>;
-            bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <KEYS_RIGHT KEYS_THUMB_R LH0>; // List of keys on the right side of the keyboard
-            hold-trigger-on-release;
-        };
-        hmr: home_row_mod_right {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "balanced";
-            require-prior-idle-ms = <150>;
-            tapping-term-ms = <280>;
-            quick-tap-ms = <175>;
-            bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <KEYS_LEFT KEYS_THUMB_L RH0>;
-            hold-trigger-on-release;
-        };
-        hmlg: home_row_mod_left_gui {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "balanced";
-            require-prior-idle-ms = <150>;
-            tapping-term-ms = <580>;
-            quick-tap-ms = <175>;
-            bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <KEYS_RIGHT KEYS_THUMB_R LH0>;
-            hold-trigger-on-release;
-        };
-        hmrg: home_row_mod_right_gui {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "balanced";
-            require-prior-idle-ms = <150>;
-            tapping-term-ms = <580>;
-            quick-tap-ms = <175>;
-            bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <KEYS_LEFT KEYS_THUMB_L RH0>;
-            hold-trigger-on-release;
-        };
-
-        ht_media: ht_media_controls {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <500>;
-            bindings = <&kp>, <&kp>;
-            display-name = "HoldTab Media Controlos";
-        };
-    };
-};
+#include "incl/behaviors.dtsi"
 
 #define PAUSBR PAUSE_BREAK
 #define VOLDN_MUT  &ht_media C_MUTE C_VOL_DN
