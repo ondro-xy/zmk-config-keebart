@@ -16,11 +16,6 @@
 };
 
 
-#include "incl/corne_labels.h"
-#include "incl/combos_lr.dtsi"
-#include "incl/morphs.dtsi"
-#include "incl/behaviors.dtsi"
-
 /* Layers */
 #define Base     0
 #define Sys      1
@@ -29,6 +24,11 @@
 #define Nav      4
 #define Num      5
 #define NumKp    6
+
+#include "incl/corne_labels.h"
+#include "incl/combos_lr.dtsi"
+#include "incl/morphs.dtsi"
+#include "incl/behaviors.dtsi"
 
 #define __         &trans
 #define xx         &none
