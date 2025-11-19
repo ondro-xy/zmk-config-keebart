@@ -16,12 +16,12 @@
 };
 
 
-#include "corne_labels.h"
-#include "corne_combos_lr.dtsi"
+#include "incl/corne_labels.h"
+#include "incl/corne_combos_lr.dtsi"
 
 / {
     behaviors {
-        #include "mod_morphs.dtsi"
+        #include "incl/morphs.dtsi"
 
         hml: home_row_mod_left {
             compatible = "zmk,behavior-hold-tap";
@@ -86,6 +86,8 @@
 / {
     keymap {
         compatible = "zmk,keymap";
+
+// TODO: backspace dat tap preferred alebo nieco podobne
 
 base_layer {  display-name = "Base";  bindings = <
 // ╭──────────┬────────────┬────────────┬────────────┬────────────┬──────────┬───────────╮╭─────────────────┬──────────┬────────────┬────────────┬────────────┬────────────┬──────────╮
