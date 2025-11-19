@@ -1,3 +1,5 @@
+/{ behaviors {
+
 eq_star: equal_star {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
@@ -58,3 +60,5 @@ q_ex: question_exclamation {
     mods = <(MOD_LSFT|MOD_RSFT)>;
     // keep-mods = <(MOD_LSFT|MOD_RSFT)>;
 };
+
+}; };

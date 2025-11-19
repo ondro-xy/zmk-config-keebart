@@ -18,10 +18,10 @@
 
 #include "incl/corne_labels.h"
 #include "incl/corne_combos_lr.dtsi"
+#include "incl/morphs.dtsi"
 
 / {
     behaviors {
-        #include "incl/morphs.dtsi"
 
         hml: home_row_mod_left {
             compatible = "zmk,behavior-hold-tap";
@@ -42,7 +42,7 @@
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <KEYS_LEFT KEYS_THUMB_L RH0>; // List of keys on the left side of the keyboard
+            hold-trigger-key-positions = <KEYS_LEFT KEYS_THUMB_L RH0>;
             hold-trigger-on-release;
         };
         hmlg: home_row_mod_left_gui {
@@ -53,7 +53,7 @@
             tapping-term-ms = <580>;
             quick-tap-ms = <175>;
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <KEYS_RIGHT KEYS_THUMB_R LH0>; // List of keys on the right side of the keyboard
+            hold-trigger-key-positions = <KEYS_RIGHT KEYS_THUMB_R LH0>;
             hold-trigger-on-release;
         };
         hmrg: home_row_mod_right_gui {
@@ -64,7 +64,7 @@
             tapping-term-ms = <580>;
             quick-tap-ms = <175>;
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <KEYS_LEFT KEYS_THUMB_L RH0>; // List of keys on the left side of the keyboard
+            hold-trigger-key-positions = <KEYS_LEFT KEYS_THUMB_L RH0>;
             hold-trigger-on-release;
         };
 
