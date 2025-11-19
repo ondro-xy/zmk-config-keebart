@@ -17,7 +17,7 @@
 
 
 #include "incl/corne_labels.h"
-#include "incl/corne_combos_lr.dtsi"
+#include "incl/combos_lr.dtsi"
 #include "incl/morphs.dtsi"
 
 / {
