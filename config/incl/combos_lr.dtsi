@@ -20,8 +20,8 @@
     combos {
         compatible = "zmk,combos";
 
-        COMBO(cmb_ret, &kp RET     , LH0 RH0, 100, 150, Base)   /* Enter */
-        COMBO(cmb_ret, &kp KP_ENTER, LH0 RH0, 100, 150, NumKp)  /* Enter Numpad */
+        COMBO(cmb_ret,   &kp RET     , LH0 RH0, 100, 150, Base)   /* Enter */
+        COMBO(cmb_retkp, &kp KP_ENTER, LH0 RH0, 100, 150, NumKp)  /* Enter Numpad */
 
         /* opening brackets are on the left side, closing on the right */
         COMBO(cmb_lpar, &hml LC(LSHFT) LPAR, LM2 LM3, 75, 75, Base NavNum Num)  /*  (  */
